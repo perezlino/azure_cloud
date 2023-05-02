@@ -1,0 +1,12 @@
+ELIMINACION DE UN CONTENEDOR DE AZURE STORAGE
+=============================================
+
+Al quitar un contenedor, se eliminan automáticamente todos los blobs que se encuentren en ese contenedor. Si
+no presta atención, puede perder datos.
+
+Podemos hacerlo siguiendo los siguientes pasos:
+
+1. Azure Portal
+2. Cuenta de almacenamiento
+3. Blob service / Contenedores ---> Seleccionar el contenedor
+4. Eliminar

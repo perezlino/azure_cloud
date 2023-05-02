@@ -1,0 +1,28 @@
+CREAR UN CONTENEDOR DE AZURE STORAGE
+====================================
+
+En una cuenta de almacenamiento de Azure podemos almacenar BLOBS en CONTENEDORES. Un CONTENEDOR proporciona 
+una forma adecuada de agrupar blobs relacionados y puede organizar blobs en una jerarquia de carpetas dentro
+de un contenedor, similar a los archivos de un sistema de archivos en disco.
+
+Podemos crear un contenedor en una cuenta de Azure Storage. Podemos hacerlo mediante:
+
+● Azure Portal
+● Azure CLI
+● Azure Powershell
+
+Utilizamos AZURE PORTAL para crear un contenedor. Los pasos son los siguientes:
+
+1. Azure Portal
+2. Cuenta de Azure Storage (Cuenta de almacenamiento)
+3. Información general (Overview)
+4. Contenedores: + Contenedor ---------------->   Nuevo Contenedor
+                                                 - Nombre
+                                                 - Nivel de acceso público ----> Privado (sin acceso anónimo)  
+                                                                                 Blob (acceso anónimo de solo lectura a los blobs)
+                                                                                 Contenedor (acceso anónimo de solo lectura a los blobs y contenedores)
+
+En el caso de un contenedor que se usará para contener blobs, el nivel de acceso más adecuado es BLOB. Esta
+configuración admite el acceso anónimo de solo lectura a los blobs. Pero los clientes no autenticados no pueden
+enumerar los blobs del contenedor (Esto significa que solo pueden descargar un blob si conocen su nombre y su
+ubicación dentro del contenedor)                                                                                 

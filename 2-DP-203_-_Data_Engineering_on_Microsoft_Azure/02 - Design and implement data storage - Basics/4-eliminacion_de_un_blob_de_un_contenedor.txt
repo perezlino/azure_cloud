@@ -1,0 +1,35 @@
+ELIMINACION DE UN BLOB DE UN CONTENEDOR
+=======================================
+
+Seguimos los siguientes pasos:
+
+1. Azure Portal
+2. Cuenta de almacenamiento
+3. Blob service ---> PROTECCIÓN DE DATOS
+
+● La protección de datos ofrece opciones para recuperar los datos cuando se modifican o eliminan por error:
+ __________________________________________________
+|  Eliminación temporal del blob:   Deshabilitada  |
+|                                 ✓ Habilitada     
+|                                                  | 
+|  Directivas de retención:                        | 
+|  Periodo de retención de blobs en dias: 30 dias  | 
+|__________________________________________________|
+
+● Si ha habilitado la opción de ELIMINACION TEMPORAL para la cuenta de almacenamiento, el blob está oculto y no
+  eliminado, por lo que se puede restaurar más adelante.
+
+● Si se ha creado la cuenta de almacenamiento con compatibilidad con espacios de nombres jerárquicos (para Data
+  Lake Storage), la opción de ELIMINACION TEMPORAL no está disponible. Todas las operaciones de elimnación de
+  blobs serán definitivas.
+
+Para eliminar blobs, seguimos los siguientes pasos:
+
+1. Azure Portal
+2. Cuenta de almacenamiento
+3. Blob service / Contenedores ---> Seleccionar el contenedor que contiene el blob
+4. Eliminar (Delete)
+
+● Si ha habilitado la ELIMINACION TEMPORAL para la cuenta de almacenamiento, la página 'Blobs' que contiene los
+  blobs de un contenedor, incluye la opción "MOSTRAR BLOBS ELIMINADOS". Si selecciona esta opción, puede ver y
+  recuperar un blob eliminado

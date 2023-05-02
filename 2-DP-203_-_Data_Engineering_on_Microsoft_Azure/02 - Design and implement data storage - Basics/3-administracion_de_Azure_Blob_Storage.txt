@@ -1,0 +1,16 @@
+ADMINISTRACION DE AZURE BLOB STORAGE
+====================================
+
+Azure Blob Storage es un repositorio adecuado para almacenar objetos binarios grandes, como imágenes y archivos
+de video y audio.
+
+En la actualidad, Azure admite tres tipos diferentes de blobs:
+
+● BLOBS EN BLOQUES: son los mejores para datos estáticos y son el tipo de almacenamiento más apropiado para 
+                    almacenar los datos de imagen.
+
+● BLOBS EN PÁGINAS: se usan para implementar el almacenamiento en disco virtual para Azure Virtual Machines.
+                    Están optimizados para admitir oepraciones de lectura y escritura aleatorias.
+
+● BLOBS EN ANEXOS: son adecuados para almacenar datos que crecen en fragmentos, como registros u otros datos de         
+                   archivo.                                        
