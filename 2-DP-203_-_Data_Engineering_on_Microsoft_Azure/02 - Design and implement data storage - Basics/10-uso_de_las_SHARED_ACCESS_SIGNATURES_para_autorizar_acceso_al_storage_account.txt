@@ -1,0 +1,72 @@
+USO DE LAS SHARED ACCESS SIGNATURES PARA AUTORIZAR ACCESO A LA CUENTA DE ALMACENAMIENTO
+=======================================================================================
+
+Puedes dar acceso selectivo a los servicios que están presentes en tu cuenta de almacenamiento. Con "Access keys", 
+nos hemos conectado a través de una "Access key" a una cuenta de almacenamiento. Ahora con la "Access key" el 
+usuario puede acceder y trabajar no solo con el "Blob service", sino tambien, con Files shares, con Queues y con 
+el Table service. Estos son todos los servicios que están disponibles, como parte de la cuenta de almacenamiento. 
+Pero si quieres limitar el acceso sólo a un servicio en particular, digamos que vas a obtener la "Shared access 
+signature" para un usuario y quieres que ese usuario sólo tenga la capacidad de acceder al "Blob service" en la 
+cuenta de almacenamiento, entonces seguimos lo siguientes pasos: 
+
+1.- Desde el Menu de nuestra cuenta de almacenamiento estandar o Data Lake seleccionamos SHARED ACCESS SIGNATURE. 
+
+2.- ● Allowed services:
+
+    ✓ Blob     File    Queue   Table
+
+    ● Allowed resource types:
+
+    ✓ Service    ✓ Container     ✓ Object
+
+    ● Allowed permissions:
+
+    ✓ Read   Write   Delete   ✓ List   Add   Create   Update   Process
+
+    ● Blob versioning permissions:
+
+      Enables deletion versions
+
+    ● Start and expiry date/time:
+
+      Start   07/02/2021      11:32:12 AM
+      End     07/02/2021      7:32:12 PM
+
+    ● Allowed IP Adresses: (También puede especificar desde qué direcciones IP será válido este SAS.)
+
+      <indicar_IP>
+
+    ● Allowed protocols:
+
+    ✓ HTTPS only   HTTPS and HTTP
+
+    ● Signing key: (Se utilizará una de las "access keys" de la cuenta de almacenamiento para generar la 
+                    "shared access signature".)
+      key1
+      key2
+       ____________________________________
+      |                                    | 
+      | Generate SAS and connection string | (Se generan la SAS, la Connection string y la Blob service SAS URL)
+      |____________________________________|
+
+      Connection string:
+      Blobendpoint=https://................................................................
+
+      SAS token:
+      ?sv=2022-01-20&ss....................................................................
+
+      Blob service SAS URL:
+      https://.............................................................................
+
+
+● El token SAS es lo que vamos a usar cuando nos conectemos a la cuenta de almacenamiento Data Lake Gen2 desde 
+  Azure Synapse.
+
+
+● Para acceder como "usuario" a la cuenta de almacenamiento utilizando una "Shared access signature"seguimos los 
+  siguientes pasos:
+
+1.- Select Resource --> What kind of Azure resource do you want to connect to? --> Storage account
+2.- Select Authentication Method --> How will you authenticate requests to the storage account --> Shared access signature (SAS)
+3.- Connect to Azure Storage --> - Display name: Storage account name (nombre de la cuenta de almacenamiento)
+                                 - SAS connection string or service URL: pegamos la "Connection string" o "Blob service SAS URL"

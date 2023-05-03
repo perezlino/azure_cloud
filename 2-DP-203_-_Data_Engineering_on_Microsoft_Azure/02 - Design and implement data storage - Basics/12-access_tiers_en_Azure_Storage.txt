@@ -1,0 +1,47 @@
+ACCESS TIERS EN AZURE STORAGE
+=============================
+ _______________________________________________________________________________________________________________
+|                                                                                                               |
+|   Azure proporciona tres niveles de almacenamiento: Hot Access Tier, Cold Access Tier y Archive Access Tier.  |
+|   Los niveles "Hot Access Tier" y "Cold Access Tier" son a nivel de cuenta de almacenamiento, es decir,       |
+|   podemos escoger entre una de estas dos al momento de crear nuestra cuenta de almacenamiento. El tercer      |
+|   nivel "Archive Access Tier" no está disponible a nivel de cuenta de almacenamiento, está disponible a nivel | 
+|   de cada blob individual.                                                                                    |
+|_______________________________________________________________________________________________________________|
+
+
+Hot Access Tier
+---------------
+
+La capa Hot Access es ideal para los datos a los que se accede con "frecuencia". Proporciona el menor coste de 
+acceso pero con un mayor coste de almacenamiento.
+
+Cold Access Tier
+----------------
+
+La capa Cold Access es ideal para los datos a los que se accede "ocasionalmente", como los datos un poco más 
+antiguos que probablemente se utilizan para las copias de seguridad o los informes mensuales. Proporciona 
+costes de almacenamiento más bajos pero con costes de acceso más altos. Azure espera que los datos de Cold 
+Access Tier se almacenen durante al menos 30 días. El borrado anticipado o el cambio de nivel 
+podría dar lugar a cargos adicionales.
+
+Archive Access Tier
+-------------------
+
+La capa Archive Acces es ideal para almacenar datos durante largos periodos de tiempo. Puede ser por razones de 
+cumplimiento, copias de seguridad a largo plazo, archivo de datos, etc. El nivel de acceso de archivo es una 
+solución de almacenamiento offline, lo que significa que no podrá acceder a los datos a menos que los rehaga 
+desde el nivel de archivo a un nivel online. Esta es la opción de almacenamiento más barata entre todos los 
+niveles. Azure espera que los datos de la capa de archivo se almacenen durante al menos 180 días. La eliminación 
+anticipada o el cambio de nivel pueden dar lugar a cargos adicionales.
+
+Tambien mencionar que un archivo que tenga el nivel "Archive access tier" NO PUEDE SER DESCARGADO NI REVISAR SU
+CONTENIDO. Para ello tendremos que cambiar nu nivel a 'Hot' o 'Cool'. A esto se le llama un proceso "Rehydrate"
+del archivo, el cual tomara bastante tiempo.
+
+
+● Para modificar los niveles de "access tier" en la cuenta almacenamiento:
+
+Desde el Menu de nuestra cuenta de almacenamiento estandar o Data Lake seleccionamos Settings/CONFIGURATION. Y
+en la opción "Blob access tier" seleccionamos la opción que necesitemos: - Hot
+                                                                         - Cold 

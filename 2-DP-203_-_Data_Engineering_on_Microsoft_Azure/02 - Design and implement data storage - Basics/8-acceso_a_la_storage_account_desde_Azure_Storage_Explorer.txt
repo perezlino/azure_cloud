@@ -1,0 +1,13 @@
+ACCESO A LA CUENTA ALMACENAMIENTO DESDE AZURE STORAGE EXPLORER
+==============================================================
+
+Azure Storage Explorer es una herramienta gratuita para administrar cómodamente los recursos de almacenamiento 
+en la nube de Azure desde su escritorio.
+
+● Para acceder como "admin" seguimos los siguientes pasos:
+
+1.- Desde el menu --> Manage accounts --> Add an account
+2.- Select Resource --> What kind of Azure resource do you want to connect to? --> Subscription
+3.- Which Azure environment will you use to sign in? --> Azure
+4.- Ingresamos nuestro correo y contraseña que utilizamos para logearnos en Azure
+5.- Seleccionamos nuestra suscripción --> Apply

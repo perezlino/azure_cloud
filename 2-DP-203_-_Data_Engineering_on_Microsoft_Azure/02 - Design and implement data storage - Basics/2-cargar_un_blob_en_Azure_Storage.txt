@@ -1,8 +1,7 @@
 CARGAR UN BLOB EN AZURE STORAGE
 ===============================
 
-Una vez creado un contenedor, podemos cargar blobs. Dependiendo de como queramos organizar los blobs,
-también podemos crear carpetas en el contenedor.
+Una vez creado un contenedor, podemos cargar blobs. 
 
 Utilizando AZURE PORTAL:
 
@@ -11,7 +10,8 @@ Utilizando AZURE PORTAL:
 
 ● Si creamos la cuenta de almacenamiento con soporte para nombres jerárquicos (para Data Lake Storage),
   la sección "Blob service" no aparece en el menu. En su lugar, seleccionamos "Contenedores" debajo de
-  Data Lake Storage.
+  Data Lake Storage. Esto porque el Data Lake Storage es una "extensión de Azure Blob Storage", el
+  servicio se construye sobre Azure Blob Storage.
 
 En la página del Contenedor:
 
@@ -23,3 +23,12 @@ En la página del Contenedor:
                               - Tamaño de bloque
                               - Nivel de acceso
                               - Cargar en carpeta
+                              
+
+El URI de un blob es similar a:
+
+https://myaccount.blob.core.windows.net/mycontainer/myblob
+
+o
+
+https://myaccount.blob.core.windows.net/mycontainer/myvirtualdirectory/myblob                              

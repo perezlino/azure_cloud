@@ -1,9 +1,50 @@
 CREAR UN CONTENEDOR DE AZURE STORAGE
 ====================================
 
-En una cuenta de almacenamiento de Azure podemos almacenar BLOBS en CONTENEDORES. Un CONTENEDOR proporciona 
-una forma adecuada de agrupar blobs relacionados y puede organizar blobs en una jerarquia de carpetas dentro
-de un contenedor, similar a los archivos de un sistema de archivos en disco.
+Azure Blob Storage es la solución de almacenamiento de objetos de Microsoft para la nube. Blob Storage está 
+optimizado para el almacenamiento de cantidades masivas de datos no estructurados.
+
+● Blob Storage ofrece tres tipos de recursos:
+
+- La cuenta de almacenamiento
+- Un contenedor en la cuenta de almacenamiento
+- Un blob en un contenedor
+
+● En el siguiente diagrama se muestra la relación entre estos recursos.
+ ______________   ______________   _________________
+|              | |              | |                 |
+|    Cuenta    | |  Contenedor  | |      Blob       |
+|              | |              | |                 |
+|    Sally --------> Imagenes ------> img01.jpg     |
+|          |   | |            ------> img02.jpg     |
+|          '-------> Audios --------> cancion.mp3   |
+|______________| |______________| |_________________|
+
+Cuentas de almacenamiento
+-------------------------
+
+Una cuenta de almacenamiento le proporciona un espacio de nombres único en Azure para sus datos. Cada objeto que 
+almacena en Azure Storage tiene una dirección que incluye su nombre de cuenta único. La combinación del nombre de 
+la cuenta y el punto de conexión del blob de Azure Storage constituye la dirección base de los objetos de la cuenta 
+de almacenamiento.
+
+Por ejemplo, si la cuenta de almacenamiento se llama "mystorageaccount", los puntos de conexión predeterminados para 
+Blob Storage son:
+
+http://mystorageaccount.blob.core.windows.net
+
+
+Contenedores
+------------
+
+Un contenedor organiza un conjunto de blobs, de forma parecida a un directorio en un sistema de archivos. Una cuenta 
+de almacenamiento puede contener un número ilimitado de contenedores y un contenedor puede almacenar un número 
+ilimitado de blobs.
+
+El URI de un contenedor es similar a:
+
+https://myaccount.blob.core.windows.net/mycontainer
+
 
 Podemos crear un contenedor en una cuenta de Azure Storage. Podemos hacerlo mediante:
 
@@ -22,7 +63,8 @@ Utilizamos AZURE PORTAL para crear un contenedor. Los pasos son los siguientes:
                                                                                  Blob (acceso anónimo de solo lectura a los blobs)
                                                                                  Contenedor (acceso anónimo de solo lectura a los blobs y contenedores)
 
-En el caso de un contenedor que se usará para contener blobs, el nivel de acceso más adecuado es BLOB. Esta
+En el caso de un contenedor que se usará para contener blobs, el nivel de acceso más adecuado es "BLOB". Esta
 configuración admite el acceso anónimo de solo lectura a los blobs. Pero los clientes no autenticados no pueden
 enumerar los blobs del contenedor (Esto significa que solo pueden descargar un blob si conocen su nombre y su
 ubicación dentro del contenedor)                                                                                 
+

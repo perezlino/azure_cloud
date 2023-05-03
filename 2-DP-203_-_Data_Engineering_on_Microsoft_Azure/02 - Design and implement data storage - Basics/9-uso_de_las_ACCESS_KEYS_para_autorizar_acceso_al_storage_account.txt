@@ -1,0 +1,19 @@
+USO DE LAS ACCESS KEYS PARA AUTORIZAR ACCESO A LA CUENTA DE ALMACENAMIENTO POR MEDIO DE AZURE STORAGE EXPLORER
+==============================================================================================================
+
+Esta es una forma de permitir que los usuarios se autoricen a sí mismos a utilizar la cuenta de almacenamiento 
+del Data Lake Gen2. Tenemos acceso a TODOS LOS SERVICIOS de la cuenta de almacenamiento.
+
+● Para acceder como "usuario" seguimos los siguientes pasos:
+
+1.- Select Resource --> What kind of Azure resource do you want to connect to? --> Storage account
+2.- Select Authentication Method --> How will you authenticate requests to the storage account --> Account name and key
+3.- Connect to Azure Storage --> - Display name: Storage account name (nombre de la cuenta de almacenamiento)
+                                 - Account name: Storage account name (nombre de la cuenta de almacenamiento)
+                                 - Account key: ingresamos la key
+
+
+● Para recuperar las "keys" de acceso a la cuenta almacenamiento:
+
+Desde el Menu de nuestra cuenta de almacenamiento estandar o Data Lake seleccionamos ACCESS KEYS. Y
+seleccionamos o la "Key1" o "Key2", da igual. 

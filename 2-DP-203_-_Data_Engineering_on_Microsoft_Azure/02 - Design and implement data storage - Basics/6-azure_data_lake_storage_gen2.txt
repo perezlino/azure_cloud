@@ -1,0 +1,21 @@
+AZURE DATA LAKE STORAGE GEN2
+============================
+
+Azure Data Lake Storage es esencialmente una extensión de Azure Blob Storage, organizado como un sistema de
+archivos casi infinito. Azure Data Lake Storage organiza sus archivos en directorios y subdirectorios para 
+mejorar laorganización de los archivos. Blob Storage solo puede imitar una estructura de directorio.
+
+En una solución de almacenamiento de datos Azure Data Services, los datos normalmente se cargan en Azure Data 
+Lake Storage antes de procesarse en una estructura que permite un análisis eficiente en Azure Synapse Analytics.
+Puede usar un servicio como Azure Data Factory para ingerir y cargar los datos de una variedad de orígenes en 
+Azure Data Lake Storage.
+
+● En el siguiente diagrama se muestra la relación entre estos recursos.
+ ______________   ______________   ______________________
+|              | |              | |                      |
+|    Cuenta    | |  Contenedor  | |    Blob o Archivos   |
+|              | |              | |                      |
+|    Sally --------> Directorio1 ------> archivo         |
+|          |   | |               ------> archivo         |
+|          '-------> Directorio2 --------> blob          | 
+|______________| |______________| |______________________|

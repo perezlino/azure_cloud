@@ -1,0 +1,15 @@
+EXTRAER UN ARCHIVO DESDE AZURE DATA LAKE STORAGE USANDO POWER BI
+================================================================
+
+● Seguimos los siguientes pasos:
+
+1.- Desde Power BI utilizamos el conector Azure Data Lake Storage Gen2
+2.- Debemos copiar el ENDPOINT de nuestro Data Lake, por lo que desde el Menu de nuestra cuenta de 
+    almacenamiento Data Lake seleccionamos ENDPOINTS. Luego buscamos la URL de "Data Lake Storage"
+    la copiamos y la pegamos en Power BI. Esta es la estructura del Endpoint:
+
+    https://myaccount.blob.core.windows.net/mycontainer/directory/myfile.csv
+
+3.- Desde POWERBI nos pedira la "ACCOUNT KEY" de nuestra cuenta de almacenamiento Data Lake. Para 
+    eso desde el Menu de nuestra cuenta de almacenamiento Data Lake seleccionamos ACCESS KEYS. Y
+    seleccionamos o la "Key1" o "Key2", da igual.
