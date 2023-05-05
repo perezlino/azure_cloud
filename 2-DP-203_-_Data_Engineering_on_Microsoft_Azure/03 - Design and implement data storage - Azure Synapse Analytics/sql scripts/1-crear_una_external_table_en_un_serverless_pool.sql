@@ -20,8 +20,8 @@ WITH IDENTITY='SHARED ACCESS SIGNATURE'
 -- Esto define el "source" de la data. 
 
 CREATE EXTERNAL DATA SOURCE log_data
-WITH (    LOCATION   = 'https://appdatalake7000.dfs.core.windows.net/data', -- "data" es el contenedor
-          CREDENTIAL = SasToken
+WITH (    LOCATION   = 'https://datalake2000.dfs.core.windows.net/data', -- "data" es el contenedor
+          CREDENTIAL = SasToken                                          -- datalake2000 es la cuenta de almacenamiento Data Lake
 )
 
 /* Esto crea un objeto External File Format que define los datos externos que pueden estar
@@ -70,11 +70,9 @@ Aqui tu Shared Access Siganture es un problema. Asegúrese de crear la Shared Ac
 The maximum reject threshold is reached.
 Esto ocurre cuando se intenta seleccionar las filas de datos de la tabla. Esto puede ocurrir si las filas no coinciden con el esquema definido para la tabla.
 
-
 */
 
 SELECT * FROM [logdata]
-
 
 SELECT [Operation name] , COUNT([Operation name]) as [Operation Count]
 FROM [logdata]

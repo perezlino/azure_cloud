@@ -1,0 +1,72 @@
+-- Laboratorio - Dedicated SQL Pool - External tables - Parquet
+
+-- Esta parte no es necesario volver a ejecutarlo si ya lo ejecutamos anteriormente. Lo hicimos en el Script 2
+-- Esto dado que se está apuntando a la misma cuenta de almacenamiento Data Lake Gen2
+ _______________________________________________________________________________________________________________
+|																												|
+|	CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'P@ssw0rd@123';													|
+|																												|		
+|	-- Aqui estamos usando la Storage account key (Access key) para la autorización					            |
+|																												|
+|	CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential													|		
+|	WITH																										|
+|	  IDENTITY = 'datalake2000',																				|
+|	  SECRET = 'VqJnhlUibasTfhSuAxkgIgY97GjRzHL9VNOPkjD8y+KYzl1LSDCflF6LXlrezAYKL3Mf1buLdZoJXa/38BXLYA==';		|	
+|																												|
+|	-- En el Dedicated SQL pool, podemos utilizar drivers Hadoop para mencionar la source						|	
+|																												|
+|	CREATE EXTERNAL DATA SOURCE log_data								   -- datalake2000: cuenta de 			|
+|	WITH ( LOCATION   = 'abfss://data@datalake2000.dfs.core.windows.net',  --               almacenamiento		|
+|          CREDENTIAL = AzureStorageCredential,					           -- data: container					|
+|          TYPE = HADOOP																						|	
+|	)																											|
+|_______________________________________________________________________________________________________________|
+
+-- Eliminar la tabla si ya existe
+DROP EXTERNAL TABLE [logdata]
+
+-- Aquí mencionamos el formato de archivo como Parquet
+
+CREATE EXTERNAL FILE FORMAT parquetfile  
+WITH (  
+    FORMAT_TYPE = PARQUET,  
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);
+
+-- Observa que los nombres de las columnas no contienen espacios
+-- Cuando se utilizó Azure Data Factory para generar estos archivos, los nombres de columna no podían tener espacios
+
+CREATE EXTERNAL TABLE [logdata]
+(
+    [Id] [int] NULL,
+	[Correlationid] [varchar](200) NULL,
+	[Operationname] [varchar](200) NULL,
+	[Status] [varchar](100) NULL,
+	[Eventcategory] [varchar](100) NULL,
+	[Level] [varchar](100) NULL,
+	[Time] [datetime] NULL,
+	[Subscription] [varchar](200) NULL,
+	[Eventinitiatedby] [varchar](1000) NULL,
+	[Resourcetype] [varchar](1000) NULL,
+	[Resourcegroup] [varchar](1000) NULL
+)
+WITH (
+ LOCATION = '/raw/parquet/',
+    DATA_SOURCE = log_data,  
+    FILE_FORMAT = parquetfile
+)
+
+/*
+Un error común puede venir al intentar seleccionar los datos, aquí puede obtener varios errores tales como MalformedInput
+
+Debe asegurarse de que los nombres de las columnas se asignan correctamente y de que los tipos de datos son correctos según la definición del archivo parquet.
+
+*/
+
+
+SELECT * FROM [logdata]
+
+SELECT [Operationname] , COUNT([Operationname]) as [Operation Count]
+FROM [logdata]
+GROUP BY [Operationname]
+ORDER BY [Operation Count]
