@@ -1,0 +1,61 @@
+DISEÑO DE TABLAS EN AZURE SYNAPSE
+=================================
+
+Distribución HASH
+-----------------
+
+● Considere el uso de tablas distribuidas hash si el tamaño de la tabla es superior a 2 GB en disco
+● Se recomienda utilizar en las fact tables <--------------
+
+Elija la columna de distribución que tenga:
+
+● Muchos valores únicos
+● No tiene NULLs o muy pocos NULLs
+● No sea la columna de fecha
+● Se utiliza en cláusulas JOIN, GROUP BY, HAVING
+● No se utiliza en las cláusulas WHERE
+
+Distribución ROUND-ROBIN
+------------------------
+
+● Este tipo de tabla distribuye las filas uniformemente entre todas las distribuciones.
+● Si una consulta necesita datos de diferentes distribuciones, puede ser necesario mover los datos para obtener 
+  los resultados de la consulta.
+● Si no se realizan joins en las tablas, se puede considerar el uso de este tipo de tabla.
+● Además, si no hay una columna candidata clara para la distribución hash de la tabla
+● Normalmente, las tablas temporales pueden utilizar este tipo de tabla
+
+Distribución REPLICATE
+----------------------
+
+● Aquí cada nodo de computación tiene la copia completa de la tabla
+● Considere el uso de tablas replicadas cuando el tamaño de la tabla sea inferior a 2 GB comprimidos
+● Es bueno considerar este tipo de tabla para sus dimension tables <------------------- Se recomienda
+● No considere este tipo de tabla si la tabla tiene frecuentes operaciones INSERT, UPDATE y DELETE. Esto podría 
+  requerir una reconstrucción de la tabla replicada.
+
+ _____________________________________________________________________________________________
+| Topic	                                            Dedicated SQL pool	Serverless SQL pool   |
+|---------------------------------------------------------------------------------------------| 
+| Determine table category	                        Yes	                No                    |
+| Schema names	                                    Yes	                Yes                   |
+| Table names	                                      Yes	                No                    |  
+| Table persistence	                                Yes	                No  <-----------      |
+| Regular table	                                    Yes	                No  <-----------      |
+| Temporary table	                                  Yes	                Yes                   |
+| External table	                                  Yes	                Yes <-----------      |
+| Data types	                                      Yes	                Yes                   |
+| Distributed tables	                              Yes	                No  <-----------      |
+| Hash-distributed tables	                          Yes	                No  <-----------      |
+| Replicated tables	                                Yes	                No  <-----------      |
+| Round-robin tables	                              Yes	                No  <-----------      |
+| Common distribution methods for tables	          Yes	                No                    |
+| Partitions	                                      Yes	                Yes <-----------      |
+| Columnstore indexes	                              Yes	                No  <-----------      |
+| Statistics	                                      Yes	                Yes                   |
+| Primary key and unique key	                      Yes	                No                    |
+| Commands for creating tables	                    Yes	                No                    |
+| Aligning source data with the data warehouse	    Yes	                No                    |
+| Unsupported table features	                      Yes	                No                    |
+| Table size queries	                              Yes	                No                    |
+|_____________________________________________________________________________________________|

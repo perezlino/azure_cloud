@@ -1,0 +1,24 @@
+CARGA DE DATOS EN EL DEDICATED SQL POOL
+=======================================
+
+Ahora, vamos a ver cómo cargar datos en un SQL Data Warehouse. Hasta ahora, hemos visto cómo crear 
+external tables que hacen referencia a datos en una fuente de datos externa (external data source). 
+Ahora es el momento de empezar a cargar datos en nuestro SQL Data Warehouse. Veamos ahora las diferentes 
+formas de cargar datos en un SQL Data Warehouse. Un concepto importante cuando se trata de cargar datos 
+es que es un poco diferente que cuando se trata de insertar datos en un SQL database tradicional. Verás, 
+las bases de datos SQL normalmente utilizan un transactional data store. Los borrados (delete) ocurren 
+con bastante frecuencia. Las actualizaciones (updates) ocurren con bastante frecuencia. Pero en un SQL 
+Data Warehouse no vas a insertar datos uno por uno. Normalmente se insertan los datos en bloque (BULK), 
+ya que, se utiliza para trabajar con datos a gran escala. Así que no se inserta un registro tras otro, 
+sino que, se copian los datos como un bloque (BULK) en el SQL Data Wareouse. Ahora, dependiendo de su 
+necesidad, a veces los datos deben ser cargados y disponibles en tiempo real. Otras veces, los datos se 
+cargan al final del día y se realiza una carga incremental de los datos en el SQL Data Warehouse. Supongo 
+que esto depende de su necesidad. 
+
+Ahora, existen diferentes maneras de cargar datos en el SQL Data Warehouse:
+
+1.- Puede utilizar la sentencia "Copy" para transferir los datos a una tabla del Dedicated SQL pool. 
+2.- Puedes utilizar "Azure Synapse Pipeline". También puedes realizar transformaciones en tus datos antes de 
+    que se copien realmente. 
+3.- O puedes usar "Polybase" para definir tablas externas y luego usar esas tablas externas para crear tus 
+    tablas internas.

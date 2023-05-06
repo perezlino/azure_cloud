@@ -1,4 +1,5 @@
 -- Lab - Creando una Fact Table
+-- Esto lo hacemos en Azure SQL Server
 -- Creemos primeramente una Vista
 
   CREATE VIEW [Sales_Fact_View]
