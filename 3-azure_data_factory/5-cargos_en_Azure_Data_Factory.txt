@@ -1,0 +1,6 @@
+CARGOS EN AZURE DATA FACTORY
+============================
+
+Por tener un dataset, es decir la vista de tus datos, no se te cobra. Sólo se cobra cuando se ejecuta el pipeline. 
+Cada vez que se ejecuta un pipeline o cuando hay algún tipo de transferencia de datos o transformación de datos 
+donde se requiere infraestructura de computación para llevar a cabo ese proceso, entonces se cobra.

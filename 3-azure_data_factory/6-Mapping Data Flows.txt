@@ -1,0 +1,10 @@
+MAPPING DATA FLOWS
+==================
+
+● Esto ayuda a visualizar las transformaciones de datos en Azure Data Factory
+● Aquí se puede escribir la lógica de transformación necesaria sin escribir realmente ningún código
+● Los data flows se ejecutan en clusters Apache Spark
+● Aquí Azure Data Factory se encargará de las transformaciones en el data flow
+● Debug mode: También dispone de un modo Debug. Aquí puedes ver realmente los resultados de cada transformación
+● En la sesión en debug mode, el data flow se ejecuta de forma interactiva en un cluster Spark
+● En el 'debug mode' se te cobrará cada hora que el cluster esté activo
