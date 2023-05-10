@@ -1,0 +1,41 @@
+PROCESAMIENTO BATCH y PROCESAMIENTO STREAM
+==========================================
+
+Procesamiento Batch
+-------------------
+
+Aquí se toman grandes cantidades de datos de la fuente, se transforman y se cargan en un almacén de datos 
+de destino.
+
+Puede tomar un gran conjunto de archivos semiestructurados y procesarlos para convertirlos en archivos 
+estructurados que puedan utilizarse en futuros análisis.
+
+Ejemplo - Web Server logs que se copian en cuentas de almacenamiento Azure Data Lake Gen2 a lo largo del día. 
+Y, a continuación, un proceso batch se inicia por la noche para procesar los datos y enviarlos a un almacén 
+analítico con fines de generación de informes diarios.
+
+ _________________    __________________    _________________    __________________    ____________________
+|   Data Storage  |  | Batch Processing |  | Analytical Data |  |     Reporting    |  |    Orquestación    |    
+|                 |  |                  |  |      Store      |  |                  |  |                    |    
+| Azure Data Lake |  |      Spark       |  |  Azure Synapse  |  |     Power BI     |  | Azure Data Factory |  
+|_________________|  |__________________|  |_________________|  |__________________|  |____________________|  
+
+
+Procesamiento en tiempo real
+----------------------------
+
+Aquí se capturan streams de datos en tiempo real y se procesan con una latencia mínima para generar informes 
+en tiempo real
+
+El procesamiento de los datos debe realizarse lo más rápidamente posible para no bloquear el stream de datos 
+entrante.
+
+Además, las plataformas deben estar disponibles para ingerir grandes cantidades de datos a gran velocidad.
+
+ ___________________    ____________________    ________________________    _______________________    ____________________
+| Real-time message |  |    Data Storage    |  |    Stream Processing   |  | Analytical Data Store |  |    Reporting BI    |    
+|     Ingestion     |  |                    |  |                        |  |                       |  |                    |    
+|                   |  | Azure Blob Storage |  | Azure Stream Analytics |  |     Azure Synapse     |  |      Power BI      |
+|    Apache Kafka   |  |                    |  |         Storm          |  |                       |  |                    |
+|  Azure Event Hubs |  |  Azure Data Lake   |  |     Spark Streaming    |  |  Spark, Hive, HBase   |  |                    |
+|___________________|  |____________________|  |________________________|  |_______________________|  |____________________|  
