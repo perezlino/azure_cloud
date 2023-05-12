@@ -8,6 +8,8 @@ container_name = "data"
 relative_path = "raw"
 adls_path = 'abfss://%s@%s.dfs.core.windows.net/%s' % (container_name, account_name, relative_path)
 
+# Se utiliza la Access Key
+
 spark.conf.set("fs.azure.account.auth.type.%s.dfs.core.windows.net" %account_name, "SharedKey")
 spark.conf.set("fs.azure.account.key.%s.dfs.core.windows.net" %account_name ,"V0bi0fr1nxs3Ox4fbPUGNDtE5XlGqvYT9tJJt0hkYS2ncXmiJtcW5DO2OLzffWKLQ410oITK3Ra7xN9Qjn1hhA==")
 

@@ -1,9 +1,9 @@
-// Lab - Spark Pool - Creating tables
+// Lab - Spark Pool - Creación de tablas
 
-// The tables are basically Parquet-backed tables
-// This can be done with the SQL command
-// The datetime format is not available
-// Data types - https://docs.microsoft.com/en-us/azure/synapse-analytics/metadata/table#expose-a-spark-table-in-sql
+// Las tablas son básicamente tablas basadas en Parquet
+// Esto se puede hacer con el comando SQL
+// El formato datetime no está disponible
+// Tipos de datos - https://docs.microsoft.com/en-us/azure/synapse-analytics/metadata/table#expose-a-spark-table-in-sql
 %%sql
 CREATE DATABASE internaldb
 CREATE TABLE internaldb.customer(Id int,name varchar(200)) USING Parquet
@@ -15,7 +15,7 @@ INSERT INTO internaldb.customer VALUES(1,'UserA')
 SELECT * FROM internaldb.customer
 
 
-// If you want to load data from the log.csv file and then save to a table
+// Si desea cargar los datos del archivo log.csv y luego guardarlos en una tabla
 %%pyspark
 df = spark.read.load('abfss://data@datalake2000.dfs.core.windows.net/raw/Log.csv', format='csv'
 , header=True
