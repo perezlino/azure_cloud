@@ -1,7 +1,7 @@
 -- Lab - Timing windows
 
--- Here We want to group the events by metricName and see the count of events fired every 2 minutes
--- Also we will have multiple inputs and outputs
+-- Aquí queremos agrupar los eventos por metricName y ver el número de eventos disparados cada 2 minutos.
+-- También tendremos múltiples entradas y salidas.
 -- https://docs.microsoft.com/en-us/stream-analytics-query/with-azure-stream-analytics
 
 CREATE TABLE [Summary]
