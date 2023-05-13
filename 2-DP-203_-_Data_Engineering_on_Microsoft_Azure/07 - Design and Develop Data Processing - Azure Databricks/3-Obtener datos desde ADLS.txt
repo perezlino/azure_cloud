@@ -1,0 +1,40 @@
+OBTENER DATOS DESDE AZURE DATA LAKE STORAGE
+===========================================
+
+1.- Utilizar un secreto de Azure Key Vault y Databricks Scoped secret
+
+
+                                    Azure Databricks
+                                    ----------------
+
+Azure Data Lake                    Notebook                                                   Azure Key Vault
+    ______             
+   |------|           Queremos acceder a un archivo en la cuenta de              Almacenaremos la access key como un secreto 
+   |------|           almacenamiento Azure Data Lake Gen2 desde                  en el servicio Azure Key Vault
+   |______|           nuestro notebook 
+   Log.csv                                                                       A continuación, crearemos un "databricks 
+                      Para la autorización a la cuenta de almacenamiento,        scoped secret" para acceder al valor de la clave   
+                      vamos a estar utilizando "Access Keys"
+                      
+
+2.- Utilizar Azure Active Directory
+
+El usuario que estaba ejecutando el notebook no necesita pasar por el proceso de tener Access Keys basadas en sus 
+credenciales, basadas en los permisos que tienen acceso a los datos en la cuenta de almacenamiento de Data Lake Gen2.
+
+                                    Azure Databricks
+                                    ----------------
+
+                        Sólo funciona con Azure Databricks Premium Plan
+                        Sólo funciona con cuentas Azure Data Lake Storage
+
+
+                Azure Data Lake                    Notebook                      Azure Active Directory
+                     ______             
+                    |------|                    
+                    |------|                                                  Usuarios definidos en Azure AD
+                    |______|           
+                    Log.csv                                                                      
+                     
+  Es necesario dar los permisos adecuados al 
+  usuario en la cuenta de almacenamiento                       

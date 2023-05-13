@@ -1,0 +1,35 @@
+INTRODUCCION A DATABRICKS
+=========================
+
+Databricks
+----------
+
+● Se trata de una empresa fundada por los creadores originales de Apache Spark
+● Databricks hace uso de Apache Spark para ofrecer una plataforma de analítica unificada
+● Tendrás que aprovisionar las máquinas
+● Instalar Spark y las librerías necesarias
+● Mantener el escalado y la disponibilidad de las máquinas
+● Con Databricks todo el entorno se puede aprovisionar con sólo unos clics 
+
+
+Qué hace Databricks por ti
+--------------------------
+
+● Creará la infraestructura de computación subyacente (underlying compute infrastructure) para ti.
+● Tiene su propio sistema de archivos por debajo (underlying file system), que es una abstracción de la capa de 
+  almacenamiento subyacente (underlying storage layer).
+● Te instalará Spark. También tiene la capacidad de instalar otras librerías y frameworks - librerías de Machine Learning
+● Te proporciona un espacio de trabajo (workspace):
+
+    - En el workspace puedes trabajar con Notebooks.
+    - Los usuarios pueden colaborar en los Notebooks
+    - Crear visualizaciones en el Notebook
+
+
+Azure Databricks
+----------------
+
+● Entorno completamente gestionado para ti
+● Utiliza la infraestructura informática subyacente y las redes virtuales
+● Azure Databricks no es más que una implementación del propio Databricks
+● Utiliza la seguridad de Azure: Azure Active Directory y el control de acceso basado en roles

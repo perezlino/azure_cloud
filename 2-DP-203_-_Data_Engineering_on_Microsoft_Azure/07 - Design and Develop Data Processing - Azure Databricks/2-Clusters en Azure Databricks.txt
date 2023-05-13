@@ -1,0 +1,57 @@
+CLUSTERS EN AZURE DATABRICKS
+============================
+
+● El clúster tendrá instalado el motor Spark y otros componentes
+
+Cluster
+ ___________________________________________________________________________
+|       _____________                 _____________    _____________        |
+|      |             |               |             |  |             |       |    
+|      | Driver node |               | Worker node |  | Worker node |       |
+|      |_____________|               |_____________|  |_____________|       |
+|                                                                           |        
+| Este distribuye la tarea a         Son los nodos que realizan las tareas  | 
+| los Worker nodes                   subyacentes (underlying tasks)         |
+|___________________________________________________________________________|
+
+● Las cargas de trabajo (workloads) pueden ejecutarse en el clúster mediante un conjunto de comandos
+
+
+Exiten 2 tipos de Clusters
+--------------------------
+
+● Interactive Cluster:
+
+- Aquí puedes analizar datos con la ayuda de notebooks interactivos
+- Varios usuarios pueden utilizar un clúster y colaborar
+
+● Job Cluster:
+
+- Aquí el trabajo se ejecuta como un job en el cluster
+- Cuando un job tiene que ejecutarse, Azure Databricks iniciará automáticamente el cluster
+- Cuando el job se haya completado, el cluster se terminará
+- Esta es una forma rentable de ejecutar jobs en un cluster
+
+
+Existen 3 tipos de Interactive Cluster:
+---------------------------------------
+
+● Single Node Cluster:
+
+- En un solo nodo se encontrará el Driver y los worker nodes
+
+● Standard Cluster:
+
+- Esto es recomendable si usted es un solo usuario
+- Aquí no hay aislamiento de fallos (fault isolation). Si varios usuarios están utilizando un clúster y uno de ellos 
+  tiene un fallo, puede afectar a las cargas de trabajo (workloads) de otros usuarios.
+- En este caso, los recursos del clúster pueden asignarse a una única carga de trabajo (single workload).
+- Soporta Python, R, Scala y SQL
+
+● High Concurrency Cluster:
+
+- Se recomienda para múltiples usuarios.
+- Dispone de aislamiento de fallos
+- Los recursos del clúster se comparten eficazmente entre las diferentes cargas de trabajo de los usuarios.
+- Soporta Python, R y SQL
+- Control de Acceso a Tablas (Table Access Control), aquí se puede conceder y revocar el acceso a los datos de Python y SQL
