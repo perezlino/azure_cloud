@@ -1,0 +1,31 @@
+DELTA TABLES
+============
+
+● Transacciones ACID en Spark:
+
+    Los niveles de aislamiento serializables garantizan que los lectores nunca vean datos inconsistentes
+
+● Gestión de metadatos escalable:
+
+    Aprovecha la potencia de procesamiento distribuido de Spark para manejar con facilidad todos los metadatos de 
+    tablas a escala de petabytes con miles de millones de archivos
+
+● Unificación de streaming y batch:
+
+    Una tabla en Delta Lake es tanto una tabla batch como una fuente de streaming y un sumidero. La ingesta de datos 
+    en streaming, el almacenamiento histórico por batch y las consultas interactivas funcionan de forma inmediata.
+
+● Aplicación de esquemas:
+
+    Gestiona automáticamente las variaciones de esquema para evitar la inserción de registros erróneos durante la 
+    ingesta.
+
+● Viaje en el tiempo:
+
+    El versionado de datos permite realizar rollbacks, registros de auditoría históricos completos y experimentos de 
+    machine learning reproducibles.
+
+● Upserts y deletes:
+
+    Admite operaciones merge, update y delete para permitir casos de uso complejos como la captura de datos modificados, 
+    operaciones de slowly-changing-dimension (SCD), streaming upserts, etc.

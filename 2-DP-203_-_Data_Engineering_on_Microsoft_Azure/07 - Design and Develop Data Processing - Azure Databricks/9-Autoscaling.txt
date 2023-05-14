@@ -1,0 +1,24 @@
+AUTOSCALING
+===========
+
+● Al crear un clúster Azure Databricks, puede especificar un número mínimo y máximo de workers para el clúster
+● Databricks elegirá entonces el número ideal de workers para ejecutar el job
+● Si una determinada fase de tu job requiere más potencia de cálculo, los workers se asignarán en consecuencia
+
+Existen dos tipos de autoescalado:
+----------------------------------
+
+● Standard autoscaling:
+
+- Aquí el cluster comienza con 8 nodos
+- Sólo se reduce (scales down) cuando el clúster está completamente inactivo y ha estado infrautilizado durante 
+  los últimos 10 minutos.
+- Reducción exponencial, comenzando con 1 nodo.
+
+● Optimized autoscaling:
+
+- Esto sólo está disponible para Azure Databricks Premium Plan
+- Puede reducirse (scale down) incluso si el clúster no está inactivo mirando el estado del archivo aleatorio
+- Reducción (scale down) basada en un porcentaje de los nodos actuales
+- En job clusters, se reduce (scales down) si el cluster está infrautilizado en los últimos 40 segundos.
+- En all-purpose clusters, se reduce (scales down) si el clúster está infrautilizado en los últimos 150 segundos.

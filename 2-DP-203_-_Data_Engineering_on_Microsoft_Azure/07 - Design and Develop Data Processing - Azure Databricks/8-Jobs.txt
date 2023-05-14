@@ -1,0 +1,7 @@
+JOBS
+====
+
+● Un job es una forma no interactiva de ejecutar una aplicación en un cluster Azure Databricks.
+● Puedes ejecutar el job de forma inmediata (manualmente) o programada (scheduled).
+● Puedes ejecutar un notebook o un archivo JAR en un job
+● El job se ejecutará en un cluster

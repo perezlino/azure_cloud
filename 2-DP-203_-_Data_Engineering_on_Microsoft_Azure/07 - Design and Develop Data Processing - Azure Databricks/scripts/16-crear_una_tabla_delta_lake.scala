@@ -1,4 +1,8 @@
-// Lab - Creating a Delta Lake Table
+// Lab - Creando una tabla Delta Lake
+
+// Así que el Databricks Runtime 8.X en adelante utiliza automáticamente "delta lake" como formato de 
+// tabla por defecto. Así que creando una tabla, no necesariamente tienes que decirle que sea una tabla 
+// delta. Este es el formato de tabla por defecto que se utilizará.
 
 import org.apache.spark.sql.functions._
 
@@ -10,7 +14,7 @@ val df = spark.read.format("json")
 .options(Map("inferSchema"->"true","header"->"true"))
 .load("abfss://data@datalake2000.dfs.core.windows.net/raw/PT1H.json")
 
-// Create a delta lake table
+// Crear una tabla delta lake
 
 df.write.format("delta").mode("overwrite").saveAsTable("metrics")
 
@@ -18,8 +22,8 @@ df.write.format("delta").mode("overwrite").saveAsTable("metrics")
 
 SELECT * FROM metrics
 
-// If you want to speed up queries that make use of predicates that involve partition columns
-// If you let's say use the metric name in where conditions
+// Si desea acelerar las consultas que hacen uso de predicados que implican columnas de partición
+// Si utiliza, por ejemplo, 'metricName' en la condición WHERE
 
 df.write.partitionBy("metricName").format("delta").mode("overwrite").saveAsTable("partitionedmetrics")
 

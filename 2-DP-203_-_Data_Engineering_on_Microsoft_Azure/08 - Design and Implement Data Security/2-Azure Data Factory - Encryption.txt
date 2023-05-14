@@ -1,0 +1,16 @@
+AZURE DATA FACTORY - ENCRYPTION
+===============================
+
+● Azure Data Factory ya cifra los datos en reposo, lo que también incluye las definiciones de entidades y 
+  cualquier dato que se almacene en caché.
+
+● El cifrado se realiza con claves gestionadas por Microsoft (Microsoft-managed keys)
+
+● Pero también puede definir sus propias claves utilizando el servicio Azure Key Vault
+
+● En el caso de Azure Key Vault, debe asegurarse de que la opción "Soft delete" está activada, así como la 
+  opción "Do Not Purge".
+
+● Conceda también a Azure Data Factory los permisos de clave "Get", "Unwrap Key" y "Wrap Key".
+
+Recuerda, esto es para encriptar cualquier definición y datos que estén en caché en Azure Data Factory.

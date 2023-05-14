@@ -1,0 +1,26 @@
+AZURE KEY VAULT
+===============
+
+Azure Key Vault Service es un servicio gestionado que se utiliza para almacenar y gestionar el ciclo de 
+vida de los "certificates", las "encryption keys" y los "secrets". Así, en lugar de que una empresa 
+invierta en hardware o software para mantener sus "certificates", sus "encryption keys" y sus "secrets", 
+puede gestionar todo esto de forma segura con el servicio Azure Key Vault. Así que te daré algunos ejemplos 
+sobre esto. Normalmente, cuando las aplicaciones quieren conectarse a una base de datos, la aplicación 
+necesita establecer una conexión con la base de datos por medio de la contraseña de la base de datos. Por 
+lo tanto, un método es embeber (incluir dentro) la contraseña de la base de datos en la propia aplicación, 
+pero esto no es una práctica segura, porque entonces, de una manera u otra, estás exponiendo la contraseña 
+de la base de datos. Lo que puedes hacer es almacenar la contraseña de la base de datos como un secreto en 
+el servicio Azure Key Vault. Entonces, cuando la aplicación quiera conectarse a la base de datos, hará una 
+llamada segura al servicio Azure Key Vault, obtendrá la contraseña de la base de datos y se conectará a la 
+base de datos. 
+
+A continuación, cuando se trata de sus "certificados". Digamos que usted tiene una aplicación que desea 
+implementar SSL, por lo que quiere asegurarse de que todo el tráfico va a través de HTTPS, entonces la 
+aplicación tiene que hacer uso de los certificados. Si quieres gestionar el ciclo de vida de tus certificados 
+en lugar de mantenerlos localmente, puedes almacenar y gestionar el ciclo de vida de estos certificados en el 
+servicio Azure Key Vault. 
+
+Y por último, tus "encryption keys", digamos que una aplicación quiere encriptar datos, para hacerlo necesita 
+hacer uso de una "encryption key". Ahora, de nuevo, en vez de almacenar esa encriptación localmente en la 
+aplicación, puede llamar a la "encryption key" o hacer referencia a la "encryption key" en el servicio Azure 
+Key Vault para encriptar los datos.
