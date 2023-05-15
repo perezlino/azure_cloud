@@ -1,0 +1,11 @@
+AZURE SYNAPSE - DATA DISCOVERY AND CLASSIFICATION
+=================================================
+
+● Esta función permite descubrir, clasificar, etiquetar y notificar los datos confidenciales de las bases 
+  de datos.
+
+● La función de descubrimiento de datos puede escanear la base de datos e identificar las columnas que contienen 
+  datos sensibles. A continuación, puede ver y aplicar las recomendaciones correspondientes
+
+● A continuación, puede aplicar etiquetas de sensibilidad a la columna. Esto ayuda a definir el nivel de 
+  sensibilidad de los datos almacenados en la columna.

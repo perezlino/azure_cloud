@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[Orders]
     Quantity int  
 );  
 
--- Insert rows into the table
+-- Insertar filas en la tabla
 
 INSERT INTO [dbo].[Orders] VALUES(1,'AgentA','AZ-900',5);
 INSERT INTO [dbo].[Orders] VALUES(1,'AgentA','DP-203',4);
@@ -17,7 +17,8 @@ INSERT INTO [dbo].[Orders] VALUES(1,'AgentB','AZ-303',6);
 INSERT INTO [dbo].[Orders] VALUES(1,'AgentA','AZ-304',7);
 INSERT INTO [dbo].[Orders] VALUES(1,'AgentB','DP-900',8);
 
--- Create three database users
+-- Crear tres usuarios de la base de datos
+-- De este modo, en función del usuario, éste debería tener permisos para seleccionar únicamente sus filas.
 
 CREATE USER Supervisor WITHOUT LOGIN;  
 CREATE USER AgentA WITHOUT LOGIN;  
