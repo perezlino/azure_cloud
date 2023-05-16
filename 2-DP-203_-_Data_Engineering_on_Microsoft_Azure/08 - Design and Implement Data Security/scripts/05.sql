@@ -1,4 +1,4 @@
-
+-- Lab - Azure Synapse - External Tables Authorization via Azure AD Authentication
 
 -- Here we want to create an external table based on the Azure AD user credentials.
 
