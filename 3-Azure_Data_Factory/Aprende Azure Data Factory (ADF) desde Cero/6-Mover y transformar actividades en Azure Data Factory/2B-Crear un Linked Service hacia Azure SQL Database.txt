@@ -1,0 +1,6 @@
+CREAR UN LINKED SERVICE HACIA AZURE SQL DATABASE
+================================================
+
+Cuando creamos un Linked Service hacia Azure SQL Database debemos dirigirnos al "SQL Server" de nuestro
+Azure SQL Database y desde "Firewalls and virtual networks" activer a "Yes" la opción de "Permitir que
+los servicios y recursos de Azure accedan a este servidor".
