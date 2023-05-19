@@ -1,0 +1,42 @@
+OPCIONES DE FUNCIONES Y TRANSFORMACION EN DATAFLOW
+==================================================
+
+      SOURCE                                            
+ ________________            
+|                |            
+| SourceCustomer |
+|________________| +  -------------------------------------> Multiple inputs/outputs                   
+                                                             -----------------------
+                                                             Join              (Combinación)
+      SOURCE                      SINK                       Conditional Split (División condicional)
+ ________________          ___________________               Exists            (Existe)
+|                |        |                   |              Union             (Union)
+| SourceCustomer |--------|   SinkCustomer    |              Lookup            (Bpusqueda)
+|________________|        |___________________|              New branch        (Nueva rama)
+             
+                                                             Schema modifier
+                                                             ---------------
+                                                             Derived Column (Columna derivada)
+                                                             Select         (Seleccionar)
+                                                             Aggregate      (Agregado)
+                                                             Surrogate Key  (Clave suplente) 
+                                                             Pivot          (Dinámico)
+                                                             Unpivot        (Anular Dinamización)
+                                                             Window         (Ventana) 
+                                                             Rank           (Clasificación) 
+
+                                                             Formatters
+                                                             ----------
+                                                             Flatten        (Acoplar)
+                                                             Parse          (Analizar)
+                                                             Stringify      (Stringify)
+
+                                                             Row Modifier
+                                                             ------------
+                                                             Filter         (Filtrar)
+                                                             Sort           (Ordenar)
+                                                             Alter Row      (Modificador fila)
+
+                                                             Destination
+                                                             -----------
+                                                             Sink           (Receptor)

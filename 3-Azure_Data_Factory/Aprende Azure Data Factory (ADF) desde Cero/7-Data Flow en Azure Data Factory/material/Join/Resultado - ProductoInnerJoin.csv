@@ -1,0 +1,16 @@
+ProductoId,NombreProducto,ProductoSubCategoriaId,Descripcion,Categoria,Color,SubCategoriaProductoId,NombreSubCategoria
+1,512MB MP3 Player E51,1,512MB USB driver plays MP3 and WMA,Economica,Negro,1,MP4&MP3
+2,1G MP3 Player E100,1,512MB USB driver plays MP3 and WMA,Regular,Blanco,1,MP4&MP3
+3,2G MP3 Player E200,1,1GB flash memory and USB driver plays MP3 and WMA,Economica,Azul,1,MP4&MP3
+4,4G MP3 Player E400,1,"2GB flash memory, LCD display, plays MP3 and WMA",Economica,Verde,1,MP4&MP3
+5,4GB Flash MP3 Player E401,1,"2GB flash memory, LCD display, plays MP3 and WMA",Regular,Negro,1,MP4&MP3
+6,Headphones E52,2,"640 x 480 VGA audio video pen, business portable recorder, about 3 hours recording",Regular,Blanco,2,Auriculares
+7,Headphones E102,2,"Voice recorder, MP3 player, USB flash drive, 64 hours recording",Economica,Azul,2,Auriculares
+8, Headphones E202,2,"Voice recorder, MP3 player, USB flash drive, 64 hours recording",Regular,Verde,2,Auriculares
+9,Headphones M170,2,"Voice recorder, MP3 player, USB flash drive, 64 hours recording",Economica,Negro,2,Auriculares
+10,Headphones E1000,2,"Voice recorder, MP3 player, USB flash drive, 64 hours recording",Regular,Blanco,2,Auriculares
+11,20" CRT TV E15,3,"20'' CRT television, built-in ATSC/NTSC tuner, receive digital and analog channels",Regular,Negro,3,Televisores
+12,13" Color TV E25,3,"13'' Color TV, ATSC/QAM Tuner, 120 minute sleep timer",Economica,Negro,3,Televisores
+13,19" Color Digital TV E35,3,"19'' 720p LCD HDTV, 2 HDMI inputs, PC input for computers",Regular,Plateado,3,Televisores
+14,20" Analog CRT TV E45,3,"20'' 720p LCD HDTV, HDMI v 1.3 digital inputs",Regular,Plateado,3,Televisores
+15,32" LCD HDTV M130,3,"32'' 720p LCD HDTV, Back-Light Control, Built-In ATSC/NTSC/QAM Digital Tuning ",Regular,Blanco,3,Televisores
