@@ -20,25 +20,25 @@ Cluster
 Exiten 2 tipos de Clusters
 --------------------------
 
+● Single Node Cluster:
+
+- En un solo nodo se encontrará el Driver y los worker nodes
+
 ● Interactive Cluster:
 
 - Aquí puedes analizar datos con la ayuda de notebooks interactivos
 - Varios usuarios pueden utilizar un clúster y colaborar
 
-● Job Cluster:
+● Job Cluster (Automatic Cluster):
 
 - Aquí el trabajo se ejecuta como un job en el cluster
-- Cuando un job tiene que ejecutarse, Azure Databricks iniciará automáticamente el cluster
+- Cuando un job tiene que ejecutarse, Azure Databricks iniciará "automáticamente" el cluster
 - Cuando el job se haya completado, el cluster se terminará
 - Esta es una forma rentable de ejecutar jobs en un cluster
 
 
-Existen 3 tipos de Interactive Cluster:
+Existen 2 tipos de Interactive Cluster:
 ---------------------------------------
-
-● Single Node Cluster:
-
-- En un solo nodo se encontrará el Driver y los worker nodes
 
 ● Standard Cluster:
 
