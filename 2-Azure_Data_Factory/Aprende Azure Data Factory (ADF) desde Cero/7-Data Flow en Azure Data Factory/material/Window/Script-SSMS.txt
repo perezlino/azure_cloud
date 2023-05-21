@@ -1,0 +1,10 @@
+SELECT PC.ProductCategoryID CategoriaID, PC.Name Categoria, P.Name Producto, OD.UnitPrice, 100 Cantidad,
+	(OD.UnitPrice*100) Total,
+	SUM(OD.UnitPrice*100) OVER (PARTITION BY PC.ProductCategoryID ORDER BY PC.ProductCategoryID) AS [SUM],
+	AVG(OD.UnitPrice*100) OVER (PARTITION BY PC.ProductCategoryID ORDER BY PC.ProductCategoryID) AS [AVG],
+	COUNT(OD.UnitPrice*100) OVER (PARTITION BY PC.ProductCategoryID ORDER BY PC.ProductCategoryID) AS [COUNT],
+	MAX(OD.UnitPrice*100) OVER (PARTITION BY PC.ProductCategoryID ORDER BY PC.ProductCategoryID) AS [MAX],
+	MIN(OD.UnitPrice*100) OVER (PARTITION BY PC.ProductCategoryID ORDER BY PC.ProductCategoryID) AS [MIN]
+FROM [SalesLT].[ProductCategory] AS PC
+	INNER JOIN [SalesLT].[Product] AS P ON P.ProductCategoryID=PC.ProductCategoryID
+	INNER JOIN [SalesLT].[SalesOrderDetail] AS OD ON OD.ProductID=P.ProductID

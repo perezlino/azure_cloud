@@ -1,0 +1,5 @@
+	SELECT PC.ProductCategoryID CategoriaID, PC.Name Categoria, P.Name Producto, OD.UnitPrice, 100 Cantidad,
+	(OD.UnitPrice*100) Total
+FROM [SalesLT].[ProductCategory] AS PC
+	INNER JOIN [SalesLT].[Product] AS P ON P.ProductCategoryID=PC.ProductCategoryID
+	INNER JOIN [SalesLT].[SalesOrderDetail] AS OD ON OD.ProductID=P.ProductID

@@ -1,0 +1,42 @@
+Query utilizada en la clase
+===========================
+
+SELECT 
+	PC.Name Categoria, 
+	P.Name Producto, 
+	OD.UnitPrice, 
+	OD.UnitPriceDiscount
+FROM 
+	[SalesLT].[ProductCategory] AS PC
+INNER JOIN 
+	[SalesLT].[Product] AS P 
+ON 
+	P.ProductCategoryID = PC.ProductCategoryID
+INNER JOIN 
+	[SalesLT].[SalesOrderDetail] AS OD 
+ON 
+	OD.ProductID=P.ProductID
+
+
+Query para obtener resultados similares en AdventureWorks2019
+=============================================================
+
+SELECT 
+	PC.Name Categoria, 
+	P.Name Producto, 
+	OD.UnitPrice,
+	OD.UnitPriceDiscount
+FROM 
+	[Production].[ProductCategory] AS PC
+INNER JOIN 
+	[Production].[ProductSubcategory] AS PS 
+ON 
+	PS.ProductCategoryID = PC.ProductCategoryID
+INNER JOIN
+	[Production].[Product] AS P
+ON
+	P.ProductSubcategoryID = PS.ProductSubcategoryID
+INNER JOIN 
+	[Sales].[SalesOrderDetail] AS OD 
+ON 
+	OD.ProductID = P.ProductID
