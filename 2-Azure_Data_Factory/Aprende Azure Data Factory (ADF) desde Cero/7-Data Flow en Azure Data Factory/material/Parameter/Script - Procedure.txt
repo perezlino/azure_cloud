@@ -1,0 +1,7 @@
+CREATE PROCEDURE SP_REP_EMP_CARGO
+AS
+SELECT Nombre+' '+Apellido Nombre,Cargo, FechaContratacion, Telefono
+FROM Empleado
+GO
+
+EXEC SP_REP_EMP_CARGO
