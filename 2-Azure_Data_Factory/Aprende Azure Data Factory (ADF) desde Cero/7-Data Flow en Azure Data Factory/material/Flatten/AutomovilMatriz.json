@@ -1,0 +1,53 @@
+[
+	{
+		"Id": "JE101",
+		"Empresa": "Jeep",
+		"Modelo": ["Renegade", "Compass", "Grand Cherokee", "All New Gladiator"],
+		"Color": ["Blanco", "Rojo", "Negro"],
+		"Contacto": {
+			"Telefono": "+91-7722658756",
+			"Email": "jeep@jeep.com"
+		}
+	},
+	{
+		"Id": "KIA299",
+		"Empresa": "KIA",
+		"Modelo": ["Picanto", "Picanto Cross", "Soluto", "Cerato Sedan"],
+		"Color": ["Blanco", "azul", "Negro"],
+		"Contacto": {
+			"Telefono": "+91-9967432891",
+			"Email": "kia@kia.com"
+		}
+	},
+	{
+		"Id": "Vw380",
+		"Empresa": "Volkswagen",
+		"Modelo": ["Gol", "Polo", "Taos", "Amarok v6"],
+		"Color": ["Gris", "Azul", "Rojo"],
+		"Contacto": {
+			"Telefono": "+91-5527349816",
+			"Email": "volkswagen@volkswagen.com"
+		}
+	},
+	{
+		"Id": "Ford630",
+		"Empresa": "Ford",
+		"Modelo": ["Ecosport", "All New Escape", "New Edge", "All New Expedition"],
+		"Color": ["Azul", "Negro", "Gris"],
+		"Contacto": {
+			"Telefono": "+91-8854338768",
+			"Email": "ford@ford.com"
+		}
+	},
+	{
+		"Id": "Tesla980",
+		"Empresa": "Tesla",
+		"Modelo": ["Modelo Y", "Modelo 3", "Modelo S", "Modelo X"],
+		"Color": ["Rojo", "Blanco"],
+		"Contacto": {
+			"Telefono": "+91-7688545998",
+			"Email": "tesla@tesla.com"
+		}
+	}
+
+]

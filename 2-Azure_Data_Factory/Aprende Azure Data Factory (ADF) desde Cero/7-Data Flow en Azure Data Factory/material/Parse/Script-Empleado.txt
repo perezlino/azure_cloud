@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS Empleado
+GO
+
+CREATE TABLE Empleado(
+ID INT,
+Nombre VARCHAR(50),
+Apellido VARCHAR(50),
+Cargo VARCHAR(50),
+FechaContratacion DATE,
+FechaCumpleanio DATE,
+Email VARCHAR(100),
+Telefono VARCHAR(20),
+ContactoEmergencia VARCHAR(100),
+ContactoEmergenciaTelefono VARCHAR(20)
+)
+GO

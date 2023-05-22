@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS Automovil;
+GO
+
+CREATE TABLE Automovil(
+Id VARCHAR(20),
+Empresa VARCHAR(50),
+Modelo VARCHAR(50),
+Color VARCHAR(50),
+Telefono VARCHAR(20),
+Email VARCHAR(100)
+)
+GO
