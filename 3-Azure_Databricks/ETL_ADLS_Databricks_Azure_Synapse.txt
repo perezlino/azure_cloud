@@ -1,0 +1,1 @@
+https://learn.microsoft.com/en-us/azure/databricks/scenarios/databricks-extract-load-sql-data-warehouse#load-data-into-azure-synapse
