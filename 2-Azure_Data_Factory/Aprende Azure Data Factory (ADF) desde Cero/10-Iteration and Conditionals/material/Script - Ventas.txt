@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS Ventas
+GO
+
+CREATE TABLE Ventas(
+VentasID INT,
+Nombre VARCHAR(50),
+Apellido VARCHAR(50),
+dni VARCHAR(10),
+fechaPedido DATE,
+producto VARCHAR(150),
+NumeroOrden VARCHAR(50),
+precioUnitario REAL,
+Cantidad INT,
+Total REAL
+)
+GO
