@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS Exportacion
+GO
+
+CREATE TABLE Exportacion(
+Empresa VARCHAR(50),
+Fruta VARCHAR(50),
+Cliente VARCHAR(50),
+Cantidad_kg INT,
+Anio INT,
+Pais VARCHAR(150),
+Precio_kg INT
+)
+GO

@@ -1,0 +1,6 @@
+PARA UN ARCHIVO EXCEL QUE TENGA DOS HOJAS
+=========================================
+
+Cuando se tenga un archivo Excel que tenga dos hojas con datos, como por ejemplo, el archivo que tenemos
+en el directorio "material/Data/Data Exportaciones.xlsx", debemos crear 2 datasets cada uno apuntando
+a 1 hoja del archivo Excel.
