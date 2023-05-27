@@ -1,0 +1,5 @@
+LINKS
+=====
+
+https://learn.microsoft.com/en-us/azure/data-factory/data-flow-expressions-usage
+https://learn.microsoft.com/en-us/azure/data-factory/data-flow-expression-functions#Overview

@@ -1,0 +1,11 @@
+Player_Id,Player_Name,Batting_Hand,Bowling_Skill,Country,Team,Coach
+pl-1,SC Ganguly,Left_Hand,Right-arm medium,India,Chennai Super Kings,Stephen Fleming
+pl-2,BB McCullum,Right_Hand,Right-arm medium,New Zealand,Delhi Capitals,Ricky Ponting
+pl-8,V Kohli,Right_Hand,Right-arm medium,India,Kolkata Knight Riders,David Hussey
+pl-9,JH Kallis,Right_Hand,Right-arm fast-medium,South Africa,Kolkata Knight Riders,David Hussey
+pl-10,CL White,Right_Hand,Legbreak googly,Australia,Kolkata Knight Riders,David Hussey
+pl-11,MV Boucher,Right_Hand,Right-arm medium,South Africa,Kolkata Knight Riders,David Hussey
+pl-12,B Akhil,Right_Hand,Right-arm medium-fast,India,Royal Challengers Bangalore,Sanjay Bangar
+pl-13,AA Noffke,Right_Hand,Right-arm fast-medium,Australia,Royal Challengers Bangalore,Sanjay Bangar
+pl-14,P Kumar,Right_Hand,Right-arm medium,India,Royal Challengers Bangalore,Sanjay Bangar
+pl-15,Z Khan,Right_Hand,Left-arm fast-medium,India,Delhi Capitals,Ricky Ponting

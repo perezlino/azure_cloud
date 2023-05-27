@@ -1,0 +1,11 @@
+Player_Id,Player_Name,Batting_Hand,Bowling_Skill,Country,Team,Coach
+pl-1,SC Ganguly,Left_Hand,Right-arm medium,India,Chennai Super Kings,Stephen Fleming
+pl-2,BB McCullum,Right_Hand,Right-arm medium,New Zealand,Chennai Super Kings,Stephen Fleming
+pl-3,RT Ponting,Right_Hand,Right-arm medium,Australia,Chennai Super Kings,Stephen Fleming
+pl-4,DJ Hussey,Right_Hand,Right-arm offbreak,Australia,Chennai Super Kings,Stephen Fleming
+pl-5,Mohammad Hafeez,Right_Hand,Right-arm offbreak,Pakistan,Mumbai Indians,Mahela Jayawardene
+pl-6,R Dravid,Right_Hand,Right-arm offbreak,India,Mumbai Indians,Mahela Jayawardene
+pl-7,W Jaffer,Right_Hand,Right-arm offbreak,India,Mumbai Indians,Mahela Jayawardene
+pl-8,V Kohli,Right_Hand,Right-arm medium,India,Kolkata Knight Riders,David Hussey
+pl-9,JH Kallis,Right_Hand,Right-arm fast-medium,South Africa,Kolkata Knight Riders,David Hussey
+pl-10,CL White,Right_Hand,Legbreak googly,Australia,Kolkata Knight Riders,David Hussey
