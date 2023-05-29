@@ -1,0 +1,14 @@
+LINKS
+=====
+
+MAPPING DATA FLOW
+-----------------
+
+https://learn.microsoft.com/en-us/azure/data-factory/data-flow-expressions-usage
+https://learn.microsoft.com/en-us/azure/data-factory/data-flow-expression-functions#Overview
+
+
+GENERAR CONTENIDO DINÁMICO
+--------------------------
+
+https://learn.microsoft.com/en-us/azure/data-factory/control-flow-expression-language-functions
