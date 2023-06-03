@@ -1,0 +1,22 @@
+/****** Object:  Table [dbo].[tbl_FileDetails]    Script Date: 27-08-2022 22:43:33 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_FileDetails](
+	[ID] [nvarchar](9) NOT NULL,
+	[FileType] [nvarchar](60) NOT NULL,
+	[ContainerName] [nvarchar](50) NOT NULL,
+	[FileName] [nvarchar](50) NOT NULL,
+	[SchemaName] [nvarchar](50) NOT NULL,
+	[tableName] [nvarchar](50) NOT NULL,
+	[Structure] [nvarchar](max) NULL,
+	[P_ID] [nvarchar](max) NOT NULL,
+	[P_SCD] [nvarchar](max) NOT NULL,
+	[Active] [int] NOT NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+

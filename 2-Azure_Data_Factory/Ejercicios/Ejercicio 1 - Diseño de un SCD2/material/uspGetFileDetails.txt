@@ -1,0 +1,20 @@
+
+CREATE PROCEDURE [dbo].[uspGetFileDetails]
+    @FileType  [nvarchar](60)
+AS  
+BEGIN
+    SET NOCOUNT ON;
+	
+select 
+	ContainerName,
+	[FileName],
+	SchemaName,
+	TableName,
+	Structure,
+	[P_ID],
+	[P_SCD]
+
+from [dbo].[tbl_FileDetails]
+where  [FileType] = @FileType and [Active] = 1;
+
+END
