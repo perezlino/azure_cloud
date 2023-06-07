@@ -23,6 +23,8 @@ Exiten 2 tipos de Clusters
 ● Single Node Cluster:
 
 - En un solo nodo se encontrará el Driver y los worker nodes
+- Recomendado para un solo usuario
+- Volumen pequeño de datos
 
 ● Interactive Cluster:
 
