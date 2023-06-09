@@ -17,8 +17,8 @@ Cluster
 ● Las cargas de trabajo (workloads) pueden ejecutarse en el clúster mediante un conjunto de comandos
 
 
-Exiten 2 tipos de Clusters
---------------------------
+Exiten 3 tipos de Clusters (Cluster Mode)
+-----------------------------------------
 
 ● Single Node Cluster:
 

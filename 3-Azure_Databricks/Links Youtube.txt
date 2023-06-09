@@ -4,3 +4,8 @@ LINKS YOUTUBE
 https://www.youtube.com/@WafaStudies
 https://www.youtube.com/@rajasdataengineering7585
 
+
+Ejemplo Microsoft: ETL ADLS --> Databricks --> Azure synapse
+============================================================
+
+https://learn.microsoft.com/en-us/azure/databricks/scenarios/databricks-extract-load-sql-data-warehouse#load-data-into-azure-synapse

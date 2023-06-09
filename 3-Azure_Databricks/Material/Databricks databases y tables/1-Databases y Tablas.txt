@@ -1,0 +1,25 @@
+DATABASES Y TABLAS
+==================
+
+● En Azure Databricks, también puedes crear una base de datos y tablas
+● La tabla es una colección de datos estructurados
+● Puedes realizar operaciones en los datos que son compatibles con Apache Spark en Dataframes en las tablas 
+  de Azure Databricks.
+● Hay dos tipos de tablas --> Globales y Locales. Una tabla global está disponible en todos los clusters
+● Una tabla global se registra en el Azure Databricks Hive Metastore o en un metastore externo
+● La tabla local no es accesible desde otros clusters y no está registrada en el Hive Metastore
+
+
+DELTA TABLES
+============
+
+Así que el Databricks Runtime 8.X en adelante utiliza automáticamente "delta lake" como formato de tabla por 
+defecto. Así que creando una tabla, no necesariamente tienes que decirle que sea una tabla delta. Este es el 
+formato de tabla por defecto que se utilizará.
+
+
+EN RESUMEN
+==========
+
+Todas las tablas que se creen, por defecto, serán Delta tables y se almacenarán en Azure Databricks Hive Metastore 
+o en un metastore externo. No es necesario indicar que son del formato DELTA.
