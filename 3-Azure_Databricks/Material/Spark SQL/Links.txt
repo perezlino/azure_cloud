@@ -1,4 +1,6 @@
 LINKS
 =====
 
+https://spark.apache.org/docs/latest/sql-ref-syntax.html
+
 https://learn.microsoft.com/en-us/azure/databricks/sql/language-manual/
